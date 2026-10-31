@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ascend Brand Book</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The ascend brand book: logo, color, type, pattern, voice and applications. Designed by Kudret Muminov.">
+<meta property="og:title" content="ascend Brand Book">
+<meta property="og:description" content="Logo, color, type, voice and applications for ascend, Kudret Muminov's fitness brand.">
+<link rel="icon" href="assets/ascend-mark-ember.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a brand book that climbs. Each section is a "camp" with its altitude in the margin; the page ends at the summit. */
+:root {
+  --ink: #14181C;      /* Basalt: rock at night */
+  --stone: #5B6670;    /* Scree: secondary text */
+  --snow: #F2F5F6;     /* Snowfield: page */
+  --glacier: #BFD8E2;  /* Glacier: support */
+  --ember: #FF5A1F;    /* Summit Ember: sunrise on the peak, the one accent */
+  --felt: #B7832F;     /* Felt: from shyrdak felt rugs, used rarely */
+  --line: #D7DEE2;
+  --white: #FFFFFF;
+  --f-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --f-body: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--snow); color: var(--ink); font: 17px/1.55 var(--f-body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(64px, 10vw, 120px); }
+.band.dark { background: var(--ink); color: var(--snow); }
+.band.dark .muted { color: #9AA6AF; }
+.band.white { background: var(--white); }
+
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+h2 { font-size: clamp(30px, 5vw, 52px); font-weight: 700; line-height: 1.05; }
+h3 { font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+p { margin: 0; }
+.muted { color: var(--stone); }
+.lead { font-size: clamp(18px, 2vw, 21px); max-width: 60ch; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+/* Section header with altitude */
+.camp { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; align-items: start; margin-bottom: 48px; }
+.alt { font: 600 13px/1.3 var(--f-mono); color: var(--ember); letter-spacing: 0.04em; padding-top: 10px; }
+.alt span { display: block; color: var(--stone); font-weight: 400; }
+.band.dark .alt span { color: #9AA6AF; }
+.camp > div { display: grid; gap: 16px; min-width: 0; }
+@media (max-width: 720px) { .camp { grid-template-columns: 1fr; gap: 8px; margin-bottom: 32px; } .alt { padding-top: 0; } }
+
+/* Hero */
+.hero { background: var(--ink); color: var(--snow); position: relative; overflow: hidden; }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.55; }
+.hero .wrap { position: relative; padding-block: clamp(72px, 12vw, 150px) clamp(56px, 8vw, 96px); display: grid; gap: 28px; }
+.hero .top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 600 13px var(--f-mono); color: #9AA6AF; letter-spacing: 0.04em; }
+.lockup { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
+.lockup svg { width: clamp(64px, 11vw, 132px); height: auto; flex-shrink: 0; }
+.wordmark { font-family: var(--f-display); font-weight: 700; letter-spacing: -0.045em; line-height: 0.9; }
+.wordmark i { font-style: normal; color: var(--ember); }
+.hero .wordmark { font-size: clamp(58px, 13vw, 168px); }
+.hero .tag { font-size: clamp(18px, 2.4vw, 24px); color: #C9D3D9; max-width: 34ch; }
+
+/* Concept */
+.concept { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.tile { background: var(--white); border-radius: 4px; padding: 28px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.band.white .tile { background: var(--snow); }
+.anatomy { background: var(--white); border-radius: 4px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.anatomy svg { width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+.anatomy ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 18px; }
+.anatomy li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; }
+.anatomy li b { font: 600 13px/1.9 var(--f-mono); color: var(--ember); }
+@media (max-width: 720px) { .anatomy { grid-template-columns: 1fr; } }
+
+/* Logo section */
+.logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .logos { grid-template-columns: 1fr; } }
+.logo-card { border-radius: 4px; aspect-ratio: 3 / 2; display: grid; place-items: center; position: relative; padding: 24px; max-width: 100%; }
+.logo-card .lbl { position: absolute; left: 16px; bottom: 14px; font: 12px var(--f-mono); letter-spacing: 0.04em; }
+.logo-card .lockup svg { width: 56px; }
+.logo-card .wordmark { font-size: 54px; }
+.on-snow { background: var(--white); color: var(--ink); }
+.on-snow .lbl { color: var(--stone); }
+.on-ink { background: var(--ink); color: var(--snow); }
+.on-ink .lbl { color: #9AA6AF; }
+.on-ember { background: var(--ember); color: var(--ink); }
+.on-ember .wordmark i { color: var(--snow); }
+.on-ember .lbl { color: var(--ink); }
+.on-glacier { background: var(--glacier); color: var(--ink); }
+.on-glacier .lbl { color: var(--ink); }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
+.dont { background: var(--white); border-radius: 4px; padding: 20px; display: grid; gap: 12px; }
+.dont .box { aspect-ratio: 16 / 9; background: var(--snow); border-radius: 2px; display: grid; place-items: center; overflow: hidden; }
+.dont p { font-size: 14px; }
+.dont p::before { content: "✕  "; color: var(--ember); font-weight: 700; }
+
+/* Color */
+.palette { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.sw { display: grid; grid-template-rows: 160px auto; border-radius: 4px; overflow: hidden; background: var(--white); min-width: 0; }
+.sw .chip { position: relative; }
+.sw .info { padding: 14px; display: grid; gap: 2px; }
+.sw .info b { font-size: 15px; }
+.sw .info span { font: 12px var(--f-mono); color: var(--stone); }
+.sw button { all: unset; cursor: pointer; font: 600 12px var(--f-mono); color: var(--ink); }
+.sw button:hover { color: var(--ember); }
+.sw button:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+@media (max-width: 900px) { .palette { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sw { grid-template-rows: 110px auto; } }
+.ratio { display: flex; height: 18px; border-radius: 2px; overflow: hidden; margin-top: 24px; }
+.ratio + p { margin-top: 10px; font-size: 14px; }
+
+/* Type */
+.type-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding-block: 28px; border-top: 1px solid var(--line); align-items: baseline; }
+.type-row:last-child { border-bottom: 1px solid var(--line); }
+.type-row .meta { font: 12px/1.6 var(--f-mono); color: var(--stone); }
+.type-row .meta b { display: block; font: 600 14px var(--f-body); color: var(--ink); }
+.s-display { font: 900 clamp(40px, 7vw, 88px)/0.95 var(--f-display); letter-spacing: -0.04em; overflow-wrap: anywhere; }
+.s-h { font: 700 clamp(24px, 3.5vw, 36px)/1.1 var(--f-display); letter-spacing: -0.02em; }
+.s-body { font: 400 18px/1.55 var(--f-body); max-width: 62ch; }
+.s-mono { font: 600 clamp(22px, 3vw, 30px)/1.2 var(--f-mono); }
+@media (max-width: 720px) { .type-row { grid-template-columns: 1fr; gap: 10px; } }
+
+/* Pattern */
+.pattern-wrap { border-radius: 4px; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.pat { aspect-ratio: 4 / 3; border-radius: 4px; position: relative; overflow: hidden; max-width: 100%; }
+.pat svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pat .lbl { position: absolute; left: 16px; bottom: 14px; font: 12px var(--f-mono); letter-spacing: 0.04em; }
+
+/* Voice */
+.voice { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.say, .nosay { border-radius: 4px; padding: 28px; display: grid; gap: 14px; align-content: start; }
+.say { background: var(--white); }
+.nosay { background: transparent; border: 1px dashed #B9C4CB; }
+.say h3::before { content: "Say"; display: block; font: 600 12px var(--f-mono); color: var(--ember); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.nosay h3::before { content: "Never say"; display: block; font: 600 12px var(--f-mono); color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.say ul, .nosay ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.say li { font-weight: 600; }
+.nosay li { color: var(--stone); text-decoration: line-through; text-decoration-color: rgba(91,102,112,0.5); }
+.principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.principles .tile b { font: 900 22px/1.1 var(--f-display); letter-spacing: -0.02em; }
+
+/* Applications */
+.apps { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .apps { grid-template-columns: 1fr; } }
+.app { display: grid; gap: 10px; min-width: 0; }
+.app .cap { font: 12px var(--f-mono); color: #9AA6AF; letter-spacing: 0.04em; }
+.tiktok { aspect-ratio: 9 / 16; border-radius: 10px; overflow: hidden; position: relative; background: #000; max-width: 100%; }
+.tiktok img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
+.tiktok .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,24,28,0.95) 0%, rgba(20,24,28,0.2) 55%, rgba(20,24,28,0.5) 100%); }
+.tiktok .t { position: absolute; left: 18px; right: 18px; bottom: 22px; display: grid; gap: 8px; }
+.tiktok .wk { font: 600 11px var(--f-mono); color: var(--ember); letter-spacing: 0.08em; }
+.tiktok .big { font: 900 clamp(26px, 3.2vw, 34px)/0.95 var(--f-display); letter-spacing: -0.03em; color: var(--snow); }
+.tiktok .hd { position: absolute; top: 16px; left: 18px; display: flex; align-items: center; gap: 6px; color: var(--snow); font: 700 13px var(--f-display); letter-spacing: -0.03em; }
+.tiktok .hd svg { width: 16px; }
+.post { aspect-ratio: 4 / 5; border-radius: 10px; background: var(--ember); color: var(--ink); padding: 26px; display: grid; align-content: space-between; position: relative; overflow: hidden; max-width: 100%; }
+.post .q { font: 900 clamp(26px, 3.4vw, 40px)/0.98 var(--f-display); letter-spacing: -0.035em; position: relative; }
+.post .by { font: 600 12px var(--f-mono); letter-spacing: 0.04em; position: relative; display: flex; justify-content: space-between; }
+.post svg.bg { position: absolute; right: -14%; bottom: -10%; width: 85%; opacity: 0.16; }
+.stack { display: grid; gap: 16px; }
+.profile { background: var(--white); color: var(--ink); border-radius: 10px; padding: 20px; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: center; }
+.profile .av { width: 72px; height: 72px; border-radius: 50%; background: var(--ink); display: grid; place-items: center; }
+.profile .av svg { width: 36px; }
+.profile b { font-family: var(--f-display); font-size: 15px; letter-spacing: -0.02em; }
+.profile p { font-size: 14px; line-height: 1.45; }
+.ui { background: var(--white); color: var(--ink); border-radius: 10px; padding: 20px; display: grid; gap: 14px; }
+.btn { appearance: none; border: 0; border-radius: 4px; font: 700 15px var(--f-body); padding: 14px 20px; cursor: pointer; min-height: 44px; }
+.btn.primary { background: var(--ember); color: var(--ink); }
+.btn.primary:hover { background: #FF7445; }
+.btn.secondary { background: var(--ink); color: var(--snow); }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.stat { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--line); padding-top: 12px; gap: 10px; }
+.stat .mono { font-size: 22px; font-weight: 600; }
+.stat .up { color: #2F8A4F; font: 600 13px var(--f-mono); }
+
+/* Footer */
+footer.band { padding-block: 64px; }
+.summit { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: end; }
+.summit .lockup .wordmark { font-size: 40px; }
+.summit .lockup svg { width: 44px; }
+.files { display: flex; flex-wrap: wrap; gap: 10px; }
+.files a { font: 600 13px var(--f-mono); text-decoration: none; border: 1px solid #3A434B; border-radius: 4px; padding: 10px 14px; color: var(--snow); }
+.files a:hover { border-color: var(--ember); color: var(--ember); }
+.credit { margin-top: 40px; font-size: 14px; color: #9AA6AF; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--snow); font: 600 13px var(--f-mono); padding: 10px 16px; border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 64 64"><path d="M6 58V48h10V38h10V28L36 8l22 50z"/></symbol>
+</svg>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="contours" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="top"><span>BRAND BOOK · V1.0 · 2026</span><span>@muminov.ascends</span></div>
+    <div class="lockup" aria-label="ascend logo">
+      <svg viewBox="0 0 64 64" fill="var(--ember)" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="wordmark">ascend<i>.</i></span>
+    </div>
+    <p class="tag">A fitness brand built one week at a time, by a student who went from the mountains of Kyrgyzstan to the gyms of South Korea.</p>
+  </div>
+</header>
+
+<!-- 1. CONCEPT -->
+<section class="band">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 1<span>0 m · Concept</span></p>
+      <div>
+        <h2>Nobody teleports to the top.</h2>
+        <p class="lead muted">ascend is about the climb, not the summit photo. Progress is slow, stepwise and earned. The brand looks the way the training feels: honest, steady and a little bit hard.</p>
+      </div>
+    </div>
+    <div class="anatomy">
+      <svg viewBox="0 0 64 64" role="img" aria-label="The ascend mark: a mountain whose left side is a staircase">
+        <path d="M6 58V48h10V38h10V28L36 8l22 50z" fill="var(--ink)"/>
+        <g font-family="JetBrains Mono, monospace" font-size="3.2" fill="var(--ember)">
+          <circle cx="11" cy="48" r="1.1"/><text x="9.6" y="45.6">1</text>
+          <circle cx="21" cy="38" r="1.1"/><text x="19.6" y="35.6">2</text>
+          <circle cx="36" cy="8" r="1.1"/><text x="38.2" y="7.4">3</text>
+          <circle cx="47" cy="33" r="1.1"/><text x="49.2" y="32.4">4</text>
+        </g>
+      </svg>
+      <ol>
+        <li><b>01</b><div><h3>The steps</h3><p class="muted">The left side climbs in equal steps. Each one is a week of training: same height, no shortcuts.</p></div></li>
+        <li><b>02</b><div><h3>Three steps, then the slope</h3><p class="muted">Like the program: learn the basics, build the habit, then the hard climb starts.</p></div></li>
+        <li><b>03</b><div><h3>The peak</h3><p class="muted">The summit sits off-centre. The top is never where you expect it, and it's always a bit further.</p></div></li>
+        <li><b>04</b><div><h3>The slope</h3><p class="muted">From the top, the climb looks like one clean line. That's what people see. The steps are what you did.</p></div></li>
+      </ol>
+    </div>
+    <div class="concept" style="margin-top:16px">
+      <div class="tile"><h3>Roots</h3><p class="muted">The Tian Shan mountains of Kyrgyzstan. Altitude, snow, rock and early sunrise give the brand its colors.</p></div>
+      <div class="tile"><h3>Discipline</h3><p class="muted">"Held myself to a high standard." The brand never promises easy. It promises honest.</p></div>
+      <div class="tile"><h3>Proof</h3><p class="muted">Numbers over hype. Weights, reps and weeks are shown in a monospaced type, like a training log.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. LOGO -->
+<section class="band white">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 2<span>1,200 m · Logo</span></p>
+      <div>
+        <h2>The mark and the wordmark</h2>
+        <p class="lead muted">Lowercase "ascend" set in Unbounded, with an ember full stop: the point where you've decided. The mark can stand alone as an avatar or app icon.</p>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logo-card on-snow"><div class="lockup"><svg viewBox="0 0 64 64" fill="var(--ink)" aria-hidden="true"><use href="#mark"/></svg><span class="wordmark">ascend<i>.</i></span></div><span class="lbl">PRIMARY · ON WHITE</span></div>
+      <div class="logo-card on-ink"><div class="lockup"><svg viewBox="0 0 64 64" fill="var(--ember)" aria-hidden="true"><use href="#mark"/></svg><span class="wordmark">ascend<i>.</i></span></div><span class="lbl">PRIMARY · ON BASALT</span></div>
+      <div class="logo-card on-ember"><div class="lockup"><svg viewBox="0 0 64 64" fill="var(--ink)" aria-hidden="true"><use href="#mark"/></svg><span class="wordmark">ascend<i>.</i></span></div><span class="lbl">ON EMBER · DOT TURNS WHITE</span></div>
+      <div class="logo-card on-glacier"><svg viewBox="0 0 64 64" fill="var(--ink)" style="width:96px" aria-hidden="true"><use href="#mark"/></svg><span class="lbl">MARK ONLY · MIN 16 PX</span></div>
+    </div>
+    <div class="rules">
+      <div class="tile"><h3>Clear space</h3><p class="muted">Keep empty space around the logo equal to the height of one step in the mark (a sixth of its height).</p></div>
+      <div class="tile"><h3>Minimum size</h3><p class="muted">Mark: 16 px. Full logo: 96 px wide. Below that, use the mark alone.</p></div>
+      <div class="tile"><h3>Name in text</h3><p class="muted">Always lowercase, no full stop in running text: "join ascend", not "Join ASCEND."</p></div>
+    </div>
+    <div class="rules">
+      <div class="dont"><div class="box"><svg viewBox="0 0 64 64" style="width:56px;transform:scaleX(-1)" fill="var(--ink)" aria-hidden="true"><use href="#mark"/></svg></div><p>Don't flip it. The steps always climb left to right.</p></div>
+      <div class="dont"><div class="box"><svg viewBox="0 0 64 64" style="width:70px;height:40px" preserveAspectRatio="none" fill="var(--ink)" aria-hidden="true"><use href="#mark"/></svg></div><p>Don't stretch or squash it.</p></div>
+      <div class="dont"><div class="box" style="background:linear-gradient(135deg,#7a5cff,#00c2ff)"><svg viewBox="0 0 64 64" style="width:56px" fill="#fff" aria-hidden="true"><use href="#mark"/></svg></div><p>No gradients, no glow, no drop shadows.</p></div>
+      <div class="dont"><div class="box"><span class="wordmark" style="font-size:34px;color:var(--ink)">ASCEND</span></div><p>Don't set the name in capitals.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COLOR -->
+<section class="band">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 3<span>2,600 m · Color</span></p>
+      <div>
+        <h2>Colors from altitude</h2>
+        <p class="lead muted">Mostly snow and basalt, like a mountain in winter. Ember is the sunrise on the peak: one per layout, never a background for long text. Tap a code to copy it.</p>
+      </div>
+    </div>
+    <div class="palette">
+      <div class="sw"><div class="chip" style="background:#14181C"></div><div class="info"><b>Basalt</b><button type="button" data-hex="#14181C">#14181C</button><span>Text, dark surfaces</span></div></div>
+      <div class="sw"><div class="chip" style="background:#F2F5F6;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="info"><b>Snowfield</b><button type="button" data-hex="#F2F5F6">#F2F5F6</button><span>Page background</span></div></div>
+      <div class="sw"><div class="chip" style="background:#FF5A1F"></div><div class="info"><b>Summit Ember</b><button type="button" data-hex="#FF5A1F">#FF5A1F</button><span>The one accent</span></div></div>
+      <div class="sw"><div class="chip" style="background:#BFD8E2"></div><div class="info"><b>Glacier</b><button type="button" data-hex="#BFD8E2">#BFD8E2</button><span>Support, cards</span></div></div>
+      <div class="sw"><div class="chip" style="background:#5B6670"></div><div class="info"><b>Scree</b><button type="button" data-hex="#5B6670">#5B6670</button><span>Secondary text</span></div></div>
+      <div class="sw"><div class="chip" style="background:#B7832F"></div><div class="info"><b>Felt</b><button type="button" data-hex="#B7832F">#B7832F</button><span>Rare: badges, merch</span></div></div>
+    </div>
+    <div class="ratio" aria-hidden="true">
+      <span style="flex:45;background:#F2F5F6;box-shadow:inset 0 0 0 1px var(--line)"></span><span style="flex:30;background:#14181C"></span><span style="flex:12;background:#BFD8E2"></span><span style="flex:7;background:#5B6670"></span><span style="flex:5;background:#FF5A1F"></span><span style="flex:1;background:#B7832F"></span>
+    </div>
+    <p class="muted">Balance in a typical layout: 45% snowfield, 30% basalt, 12% glacier, 7% scree, 5% ember, 1% felt. Ember text on snowfield is for big headlines only; for small text use basalt.</p>
+  </div>
+</section>
+
+<!-- 4. TYPE -->
+<section class="band white">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 4<span>3,800 m · Type</span></p>
+      <div>
+        <h2>Three voices</h2>
+        <p class="lead muted">A wide, heavy display face that feels like a mountain range. A plain, friendly body face for explaining. A monospaced face for the numbers, because numbers are proof.</p>
+      </div>
+    </div>
+    <div class="type-row"><p class="meta"><b>Display</b>Unbounded Black · 900<br>Headlines, covers</p><p class="s-display">Week 8.<br>Still going.</p></div>
+    <div class="type-row"><p class="meta"><b>Heading</b>Unbounded Bold · 700<br>Section titles</p><p class="s-h">No sugarcoating.</p></div>
+    <div class="type-row"><p class="meta"><b>Body</b>Instrument Sans · 400 / 600<br>Everything you read</p><p class="s-body">Train 3–4 days a week for 8 weeks, eat your protein, and you will be stronger and look different by week 8. If you're not, you get your money back.</p></div>
+    <div class="type-row"><p class="meta"><b>Data</b>JetBrains Mono · 600<br>Sets, reps, weights, dates</p><p class="s-mono">4 × 5 @ 80 kg <span style="color:var(--ember)">↑ +12.5</span></p></div>
+  </div>
+</section>
+
+<!-- 5. PATTERN -->
+<section class="band">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 5<span>4,900 m · Pattern</span></p>
+      <div>
+        <h2>Contours and steps</h2>
+        <p class="lead muted">Two textures for backgrounds. Contour lines, like a topographic map of the Tian Shan, for big calm areas. The step pattern, a nod to the geometric felt rugs of Kyrgyz homes, for small accents.</p>
+      </div>
+    </div>
+    <div class="pattern-wrap">
+      <div class="pat" style="background:var(--ink)"><svg id="contourSvg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg><span class="lbl" style="color:#9AA6AF">CONTOURS · BASALT</span></div>
+      <div class="pat" style="background:var(--glacier)">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="steps" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 40V30h10V20h10V10h10V0h10" fill="none" stroke="#14181C" stroke-width="2.5"/></pattern></defs>
+          <rect width="400" height="300" fill="url(#steps)" opacity="0.5"/>
+        </svg>
+        <span class="lbl" style="color:var(--ink)">STEPS · GLACIER</span>
+      </div>
+      <div class="pat" style="background:var(--ember)">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="steps2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 40V30h10V20h10V10h10V0h10" fill="none" stroke="#14181C" stroke-width="2.5"/></pattern></defs>
+          <rect width="400" height="300" fill="url(#steps2)" opacity="0.22"/>
+        </svg>
+        <span class="lbl" style="color:var(--ink)">STEPS · EMBER, SMALL AREAS ONLY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. VOICE -->
+<section class="band white">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">CAMP 6<span>6,100 m · Voice</span></p>
+      <div>
+        <h2>Talk like a training partner</h2>
+        <p class="lead muted">Direct, honest, a bit dry. Short sentences. Say the hard part out loud. Never hype, never shame.</p>
+      </div>
+    </div>
+    <div class="principles">
+      <div class="tile"><b>Honest first</b><p class="muted">Say what it takes before what you'll get.</p></div>
+      <div class="tile"><b>Show numbers</b><p class="muted">"60 × 8 in week 1, 75 × 8 in week 8" beats "insane gains".</p></div>
+      <div class="tile"><b>Respect effort</b><p class="muted">Talk to people who show up. Don't mock the ones who haven't started.</p></div>
+    </div>
+    <div class="voice">
+      <div class="say"><h3>This is us</h3><ul>
+        <li>No sugarcoating. This won't work if you don't.</li>
+        <li>Nobody gets a dream body in 8 weeks. Mine took 1.5 years.</li>
+        <li>Show up when you don't feel like it.</li>
+        <li>See progress, or get your money back.</li>
+      </ul></div>
+      <div class="nosay"><h3>Not us</h3><ul>
+        <li>Get shredded in 30 days!!!</li>
+        <li>The one secret trainers don't want you to know</li>
+        <li>Only weak people skip leg day</li>
+        <li>Limited offer, 90% off, ends tonight</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. APPLICATIONS -->
+<section class="band dark">
+  <div class="wrap">
+    <div class="camp">
+      <p class="alt">SUMMIT<span>7,439 m · In use</span></p>
+      <div>
+        <h2>The brand at work</h2>
+        <p class="lead muted">Templates for the places people meet ascend: a TikTok cover, an Instagram post, the profile and the buttons on the site.</p>
+      </div>
+    </div>
+    <div class="apps">
+      <div class="app">
+        <div class="tiktok">
+          <img src="img/now.jpg" alt="Kudret training, used as a TikTok cover background">
+          <div class="shade"></div>
+          <div class="hd"><svg viewBox="0 0 64 64" fill="var(--ember)" aria-hidden="true"><use href="#mark"/></svg>ascend.</div>
+          <div class="t"><span class="wk">WEEK 3 / 8 · FOUNDATION</span><span class="big">I didn't feel like it. I went anyway.</span></div>
+        </div>
+        <p class="cap">TIKTOK COVER · 9:16</p>
+      </div>
+      <div class="app">
+        <div class="post">
+          <svg class="bg" viewBox="0 0 64 64" fill="var(--ink)" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="by"><span>@muminov.ascends</span><span>01 / 05</span></span>
+          <p class="q">Nobody teleports to the top.</p>
+          <span class="by"><span>ascend.</span><span>swipe →</span></span>
+        </div>
+        <p class="cap">INSTAGRAM CAROUSEL · 4:5</p>
+      </div>
+      <div class="app stack">
+        <div class="profile">
+          <div class="av"><svg viewBox="0 0 64 64" fill="var(--ember)" aria-hidden="true"><use href="#mark"/></svg></div>
+          <div><b>muminov.ascends</b><p>Held myself to a high standard.<br>8-week program ↓ kudret05.github.io/ascend</p></div>
+        </div>
+        <p class="cap">PROFILE · AVATAR + BIO</p>
+        <div class="ui">
+          <div class="btn-row"><button type="button" class="btn primary">Get it for $4.99</button><button type="button" class="btn secondary">DM to apply</button></div>
+          <div class="stat"><span>Bench press · e1RM</span><span><span class="mono">78.0 kg</span> <span class="up">+9.5</span></span></div>
+          <div class="stat"><span>Sessions</span><span class="mono">14 / 32</span></div>
+        </div>
+        <p class="cap">WEBSITE UI · BUTTONS + DATA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="band dark" style="border-top:1px solid #2A3138">
+  <div class="wrap">
+    <div class="summit">
+      <div class="lockup"><svg viewBox="0 0 64 64" fill="var(--ember)" aria-hidden="true"><use href="#mark"/></svg><span class="wordmark">ascend<i>.</i></span></div>
+      <div class="files">
+        <a href="assets/ascend-mark.svg" target="_blank" rel="noopener">mark.svg</a>
+        <a href="assets/ascend-mark-ember.svg" target="_blank" rel="noopener">mark-ember.svg</a>
+        <a href="assets/ascend-avatar.svg" target="_blank" rel="noopener">avatar.svg</a>
+        <a href="../" >visit the site →</a>
+      </div>
+    </div>
+    <p class="credit">Brand identity designed by Kudret Muminov, 2026. Built with AI-assisted tools. The 7,439 m summit is Jengish Chokusu, the highest peak of the Tian Shan, on the border of Kyrgyzstan and China.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+(function () {
+  // Contour lines: concentric noisy rings, like a topo map of a peak.
+  function rings(cx, cy, count, step, seed) {
+    var out = [];
+    for (var k = 1; k <= count; k++) {
+      var r = k * step, pts = [];
+      for (var a = 0; a <= 64; a++) {
+        var t = a / 64 * Math.PI * 2;
+        var n = Math.sin(t * 3 + seed) * 0.12 + Math.sin(t * 5 + seed * 2) * 0.06 + Math.sin(t * 2 + k * 0.3) * 0.08;
+        var rr = r * (1 + n);
+        pts.push([cx + Math.cos(t) * rr * 1.25, cy + Math.sin(t) * rr * 0.8]);
+      }
+      out.push(pts);
+    }
+    return out;
+  }
+  // SVG version in the pattern section
+  var svg = document.getElementById('contourSvg');
+  if (svg) {
+    var d = rings(250, 120, 14, 22, 1.3).map(function (p) { return 'M' + p.map(function (q) { return q[0].toFixed(1) + ' ' + q[1].toFixed(1); }).join('L') + 'Z'; });
+    svg.innerHTML = d.map(function (pd, i) { return '<path d="' + pd + '" fill="none" stroke="' + (i === 3 ? '#FF5A1F' : '#BFD8E2') + '" stroke-width="' + (i === 3 ? 1.6 : 0.8) + '" opacity="' + (i === 3 ? 1 : 0.35) + '"/>'; }).join('');
+  }
+  // Canvas version behind the hero
+  var c = document.getElementById('contours');
+  function draw() {
+    if (!c) return;
+    var w = c.clientWidth, h = c.clientHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    c.width = w * dpr; c.height = h * dpr;
+    var g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    var step = Math.max(w, h) / 30;
+    rings(w * 0.78, h * 0.35, 22, step, 0.7).forEach(function (p, i) {
+      g.beginPath(); p.forEach(function (q, j) { j ? g.lineTo(q[0], q[1]) : g.moveTo(q[0], q[1]); });
+      g.closePath(); g.lineWidth = i === 2 ? 1.6 : 0.8;
+      g.strokeStyle = i === 2 ? 'rgba(255,90,31,0.9)' : 'rgba(191,216,226,0.35)'; g.stroke();
+    });
+  }
+  draw(); window.addEventListener('resize', draw);
+
+  // Copy hex codes
+  var toast = document.getElementById('toast'), timer;
+  function show(msg) { toast.textContent = msg; toast.hidden = false; clearTimeout(timer); timer = setTimeout(function () { toast.hidden = true; }, 1600); }
+  document.querySelectorAll('[data-hex]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var hex = b.getAttribute('data-hex');
+      try {
+        navigator.clipboard.writeText(hex).then(function () { show('Copied ' + hex); }, function () { show(hex); });
+      } catch (e) { show(hex); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

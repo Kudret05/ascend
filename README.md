@@ -4,6 +4,10 @@ Landing page for the **Ascend 8-Week Program** by Kudret Muminov ([@muminov.asce
 
 **Live site:** https://kudret05.github.io/ascend/
 
+## Brand book
+
+The ascend identity (logo, colors, type, patterns, voice and social templates) lives at **https://kudret05.github.io/ascend/brand/**. Concept: a mountain whose left side is a staircase, one step per week of training, inspired by the Tian Shan mountains of Kyrgyzstan.
+
 ## What's on the page
 
 - Hero with the program offer ($4.99, 3–4 days a week, beginner friendly)
